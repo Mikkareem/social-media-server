@@ -15,6 +15,8 @@ const io = socketIO(server)
 
 io.on('connection', (socket) => {
     console.log('someone connected')
+
+    socket.emit('new message', "welcome kareem")
 })
 
 server.listen(5000, () => {
